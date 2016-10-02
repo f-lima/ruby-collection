@@ -1,5 +1,3 @@
-#!/usr/bin/ruby
-
 class FLSet
 	attr_accessor :arr
 	def initialize()
