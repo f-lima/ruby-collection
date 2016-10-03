@@ -25,7 +25,7 @@ class FLSet
 	end
 	def subtract(anotherSet)
 		raise "Invalid param" if (not(anotherSet.is_a? FLSet))
-		ret = Set.new()
+		ret = FLSet.new()
 		if (anotherSet.isEmpty() or self.isEmpty()) then
 			return self
 		else
@@ -39,7 +39,7 @@ class FLSet
 	end
 	def intersect(anotherSet)
 		raise "Invalid param" if (not(anotherSet.is_a? FLSet))
-		ret = Set.new()
+		ret = FLSet.new()
 		if (anotherSet.isEmpty() or self.isEmpty()) then
 			return ret
 		else
@@ -53,7 +53,7 @@ class FLSet
 	end
 	def union(anotherSet)
 		raise "Invalid param" if (not(anotherSet.is_a? FLSet))
-		ret = Set.new()
+		ret = FLSet.new()
 		for elem in @arr do
 			ret.insert(elem)
 		end
@@ -64,7 +64,7 @@ class FLSet
 	end
 	def exclusiveOr(anotherSet)
 		raise "Invalid param" if (not(anotherSet.is_a? FLSet))
-		ret = Set.new()
+		ret = FLSet.new()
 		for elem in @arr do
 			if (not anotherSet.contains(elem)) then
 				ret.insert(elem)
@@ -83,13 +83,6 @@ class FLSet
 			ret.push(e)
 		end
 		return ret
-	end
-	def to_s()
-		str = ""
-		for e in @arr do
-			str = str + e.to_s() + " "
-		end
-		return str.strip()
 	end
 	private :arr, :arr=
 end

@@ -16,7 +16,7 @@ class FLList
 	def insert(value)
 		@arr.push(value)
 	end
-	def insert(value, at)
+	def insertAt(value, at)
 		@arr.insert(at, value)
 	end
 	def remove(value)
@@ -35,13 +35,6 @@ class FLList
 			ret.push(e)
 		end
 		return ret
-	end
-	def to_s()
-		str = ""
-		for e in @arr do
-			str = str + e.to_s() + " "
-		end
-		return str.strip()
 	end
 	private :arr, :arr=
 end
