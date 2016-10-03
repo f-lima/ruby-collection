@@ -22,4 +22,4 @@ Example:
     st.insert(3)
     puts st.to_a.sort  # will print [1, 2, 3]
 
-** Both classes can store any type of value from integers to complex objects. **
+***Both classes can store any type of value from integers to complex objects.***
